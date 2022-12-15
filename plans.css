@@ -1,0 +1,156 @@
+.plans {
+  margin-bottom: 2000px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.tabs>input[type="radio"]:checked+label {
+  background-color: rgb(255, 62, 62);
+  color: white
+}
+
+.tabs>div {
+  display: none;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3 {
+  display: block;
+}
+
+.tabs>label {
+  color: rgb(255, 62, 62);
+  border: 1px solid rgb(255, 62, 62);
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #eee;
+  padding: 2px 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  margin-right: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.tabs>label:first-of-type {
+  margin-left: 0;
+}
+
+.Studio {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Studio__left {
+  position: relative;
+  background: rgb(255, 62, 62);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.Studio__left>p {
+  color: white;
+  font-size: 25px;
+}
+
+.Studio-left__txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.Studio-left__rooms {
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.Studio-left__txt>span {
+  font-weight: 800
+}
+
+
+.area{
+  display: none;
+}
+
+.Studio__txt{
+  color: white;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+
+
+
+.slider-arrow_left{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: url(./img/arrow.svg);
+  top: 215px;
+  left: 410px;
+  cursor: pointer; 
+  z-index: 4;
+}
+
+.slider-arrow_right{
+  overflow: visible;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: url(./img/arrow.svg);
+  top: 215px;
+  left: 1241px;
+  cursor: pointer;
+  transform: rotate(180deg)
+}
+
+
+@media screen and (max-width:1420px){
+  .slider-arrow_left{
+    position: absolute;
+    top: 155px;
+    left: 365px;
+  }
+  
+  .slider-arrow_right{
+    top: 155px;
+    left: 842px;
+    z-index: 4;
+  }
+  
+  .Studio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 100px
+  }
+  
+  .Studio__left {
+   margin-left: -120px;
+  }
+  .tabs>label:first-of-type {
+    margin-left: 110px;
+  }
+}
